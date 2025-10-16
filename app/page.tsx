@@ -3,6 +3,13 @@
 import { useState } from "react";
 import { fortunes } from "../lib/fortunes";
 
+// Define MiniKit type
+interface MiniKitWindow extends Window {
+  MiniKit?: {
+    castAction: (params: { text: string }) => Promise<void>;
+  };
+}
+
 export default function Home() {
   const [fortune, setFortune] = useState<string | null>(null);
 
@@ -12,14 +19,16 @@ export default function Home() {
   };
 
   const shareToFarcaster = async () => {
-    // MiniKit integration example (optional)
-    if (typeof window !== "undefined" && (window as any).MiniKit) {
-      const MiniKit = (window as any).MiniKit;
-      await MiniKit.castAction({
-        text: `🔮 ${fortune}\n\nGet your fortune: ${window.location.origin}`,
-      });
-    } else {
-      alert("MiniKit not available — open in Base app preview!");
+    // MiniKit integration with proper typing
+    if (typeof window !== "undefined") {
+      const windowWithMiniKit = window as MiniKitWindow;
+      if (windowWithMiniKit.MiniKit) {
+        await windowWithMiniKit.MiniKit.castAction({
+          text: `🔮 ${fortune}\n\nGet your fortune: ${window.location.origin}`,
+        });
+      } else {
+        alert("MiniKit not available — open in Base app preview!");
+      }
     }
   };
 
