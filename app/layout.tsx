@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { Inter, Source_Code_Pro } from "next/font/google";
-import { SafeArea } from "@coinbase/onchainkit/minikit";
 import { minikitConfig } from "../minikit.config";
 import { RootProvider } from "./rootProvider";
 import "./globals.css";
@@ -14,9 +13,9 @@ export async function generateMetadata(): Promise<Metadata> {
         version: minikitConfig.miniapp.version,
         imageUrl: minikitConfig.miniapp.heroImageUrl,
         button: {
-          title: `Join the ${minikitConfig.miniapp.name} Waitlist`,
+          title: "Get Your Fortune",
           action: {
-            name: `Launch ${minikitConfig.miniapp.name}`,
+            name: "Open Fortune Cookie",
             type: "launch_frame",
           },
         },
@@ -44,7 +43,7 @@ export default function RootLayout({
     <RootProvider>
       <html lang="en">
         <body className={`${inter.variable} ${sourceCodePro.variable}`}>
-          <SafeArea>{children}</SafeArea>
+          {children}
         </body>
       </html>
     </RootProvider>

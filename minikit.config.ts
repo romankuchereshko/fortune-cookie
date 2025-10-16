@@ -1,6 +1,8 @@
 const ROOT_URL =
   process.env.NEXT_PUBLIC_URL ||
-  (process.env.VERCEL_PROJECT_PRODUCTION_URL ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}` : 'http://localhost:3000');
+  (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : 'http://localhost:3000');
+
+console.log('🔍 ROOT_URL:', ROOT_URL);
 
 /**
  * MiniApp configuration object. Must follow the Farcaster MiniApp specification.
@@ -29,7 +31,7 @@ export const minikitConfig = {
     heroImageUrl: `${ROOT_URL}/hero.png`,
     tagline: "Crack a cookie, cast your fate",
     ogTitle: "Farcaster Fortune Cookie",
-    ogDescription: "Your Web3 fortune awaits",
+    ogDescription: "Your fortune awaits",
     ogImageUrl: `${ROOT_URL}/hero.png`,
   },
   "baseBuilder": {
