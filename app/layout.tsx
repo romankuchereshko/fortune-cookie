@@ -43,7 +43,7 @@ export default function RootLayout({
   return (
     <RootProvider>
       <html lang="en">
-        <body className={`${inter.variable} ${sourceCodePro.variable}`}>
+        <body className={`${inter.variable} ${sourceCodePro.variable} min-h-screen`}>
           <SafeArea>{children}</SafeArea>
         </body>
       </html>
