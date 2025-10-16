@@ -16,8 +16,8 @@ export const minikitConfig = {
   miniapp: {
     version: "1",
     name: "Farcaster Fortune Cookie",
-    subtitle: "Crypto prophecy in one click",
-    description: "Crack a cookie and reveal your Web3 destiny",
+    subtitle: "Crypto prophecy in one click.",
+    description: "Crack a cookie and reveal your Web3 destiny.",
     screenshotUrls: [`${ROOT_URL}/screenshot-portrait.png`],
     iconUrl: `${ROOT_URL}/icon.png`,
     splashImageUrl: `${ROOT_URL}/splash.png`,
@@ -29,7 +29,7 @@ export const minikitConfig = {
     heroImageUrl: `${ROOT_URL}/hero.png`,
     tagline: "Crack a cookie, cast your fate.",
     ogTitle: "Farcaster Fortune Cookie",
-    ogDescription: "Your Web3 fortune awaits",
+    ogDescription: "Your Web3 fortune awaits.",
     ogImageUrl: `${ROOT_URL}/hero.png`,
   },
 } as const;
