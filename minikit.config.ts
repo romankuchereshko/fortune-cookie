@@ -11,7 +11,7 @@ export const minikitConfig = {
   "accountAssociation": {
     "header": "eyJmaWQiOjU1NTE5NSwidHlwZSI6ImN1c3RvZHkiLCJrZXkiOiIweDc4NzgxNkMzZTcxNDZERDQ5N2E4ZUQ3NzA1NjljNjZlMGI5RWUyNTAifQ",
     "payload": "eyJkb21haW4iOiJmb3J0dW5lLWNvb2tpZS1mdW4udmVyY2VsLmFwcCJ9",
-    "signature": "MHhhYzRjNzk2ZWJiMDkwNGU2MDZkZGViZjgyYjMxZmYzZjJiODA0MTIyMjdlNGE3YTgwNWQxMzhhMGNmNTJmZTlmMjUyYTNiY2QyZjk2MzZkNTM4YjU4YzYyMWVhMmYxY2M3Y2YyOGQ2MWE4OTZmNDY5MjNlMjA1MGI3NmYxOGNlODFi"
+    "signature": "rEx5brsJBOYG3ev4KzH/PyuAQSIn5KeoBdE4oM9S/p8lKjvNL5Y21Ti1jGIeovHMfPKNYaiW9Gkj4gULdvGM6Bs="
   },
   miniapp: {
     version: "1",
