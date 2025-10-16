@@ -2,6 +2,8 @@ const ROOT_URL =
   process.env.NEXT_PUBLIC_URL ||
   (process.env.VERCEL_PROJECT_PRODUCTION_URL ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}` : 'http://localhost:3000');
 
+console.log('🔍 ROOT_URL:', ROOT_URL);
+
 /**
  * MiniApp configuration object. Must follow the Farcaster MiniApp specification.
  *
@@ -16,8 +18,8 @@ export const minikitConfig = {
   miniapp: {
     version: "1",
     name: "Farcaster Fortune Cookie",
-    subtitle: "Crypto prophecy in one click.",
-    description: "Crack a cookie and reveal your Web3 destiny.",
+    subtitle: "Crypto prophecy in one click",
+    description: "Crack a cookie and reveal your crypto destiny",
     screenshotUrls: [`${ROOT_URL}/screenshot-portrait.png`],
     iconUrl: `${ROOT_URL}/icon.png`,
     splashImageUrl: `${ROOT_URL}/splash.png`,
@@ -27,12 +29,12 @@ export const minikitConfig = {
     primaryCategory: "entertainment",
     tags: ["fortune", "farcaster", "entertainment"],
     heroImageUrl: `${ROOT_URL}/hero.png`,
-    tagline: "Crack a cookie, cast your fate.",
+    tagline: "Crack a cookie, cast your fate",
     ogTitle: "Farcaster Fortune Cookie",
-    ogDescription: "Your Web3 fortune awaits.",
+    ogDescription: "Your fortune awaits",
     ogImageUrl: `${ROOT_URL}/hero.png`,
   },
   "baseBuilder": {
-    "ownerAddress": "0x39d89D346119f542056cdF6e8a261114875B6Ed2"
+    "ownerAddress": "0x39d890346119f542056cdFe6e8a261114875B6Ed2"
   }
 } as const;
