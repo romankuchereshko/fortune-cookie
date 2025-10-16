@@ -27,7 +27,7 @@ export const minikitConfig = {
     primaryCategory: "entertainment",
     tags: ["fortune", "farcaster", "entertainment"],
     heroImageUrl: `${ROOT_URL}/hero.png`,
-    tagline: "Crack a cookie, cast your fate",
+    tagline: "Crack a cookie, cast your fate.",
     ogTitle: "Farcaster Fortune Cookie",
     ogDescription: "Your Web3 fortune awaits",
     ogImageUrl: `${ROOT_URL}/hero.png`,
