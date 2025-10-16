@@ -25,7 +25,6 @@ export default function Home() {
   };
 
   const shareToFarcaster = async () => {
-    // MiniKit integration with proper typing
     if (typeof window !== "undefined") {
       const windowWithMiniKit = window as MiniKitWindow;
       if (windowWithMiniKit.MiniKit) {
@@ -33,7 +32,6 @@ export default function Home() {
           text: `🔮 ${fortune}\n\nGet your fortune: ${window.location.origin}`,
         });
       } else {
-        // Better fallback for browser
         if (navigator.share) {
           try {
             await navigator.share({
@@ -41,8 +39,7 @@ export default function Home() {
               text: `🔮 ${fortune}`,
               url: window.location.origin,
             });
-          } catch (err) {
-            // User cancelled or error
+          } catch {
             console.log('Share cancelled');
           }
         } else if (navigator.clipboard) {
