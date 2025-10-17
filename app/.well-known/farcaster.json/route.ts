@@ -1,6 +1,16 @@
-import { withValidManifest } from "@coinbase/onchainkit/minikit";
-import { minikitConfig } from "../../../minikit.config";
+import { NextResponse } from 'next/server';
+import { minikitConfig } from '../../../minikit.config';
 
 export async function GET() {
-  return Response.json(withValidManifest(minikitConfig));
+  const manifest = {
+    ...minikitConfig.accountAssociation,
+    ...minikitConfig.miniapp,
+  };
+
+  return NextResponse.json(manifest, {
+    headers: {
+      'Content-Type': 'application/json',
+      'Access-Control-Allow-Origin': '*',
+    },
+  });
 }
