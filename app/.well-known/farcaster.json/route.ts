@@ -2,7 +2,7 @@ import { NextResponse } from 'next/server';
 import { minikitConfig } from '../../../minikit.config';
 
 export async function GET() {
-  // Structure the manifest exactly as Farcaster expects
+  // Include ALL fields from miniapp config
   const manifest = {
     accountAssociation: {
       header: minikitConfig.accountAssociation.header,
@@ -17,6 +17,16 @@ export async function GET() {
       splashBackgroundColor: minikitConfig.miniapp.splashBackgroundColor,
       homeUrl: minikitConfig.miniapp.homeUrl,
       webhookUrl: minikitConfig.miniapp.webhookUrl,
+      primaryCategory: minikitConfig.miniapp.primaryCategory,
+      tags: minikitConfig.miniapp.tags,
+      subtitle: minikitConfig.miniapp.subtitle,
+      description: minikitConfig.miniapp.description,
+      screenshotUrls: minikitConfig.miniapp.screenshotUrls,
+      heroImageUrl: minikitConfig.miniapp.heroImageUrl,
+      tagline: minikitConfig.miniapp.tagline,
+      ogTitle: minikitConfig.miniapp.ogTitle,
+      ogDescription: minikitConfig.miniapp.ogDescription,
+      ogImageUrl: minikitConfig.miniapp.ogImageUrl,
     },
   };
 
