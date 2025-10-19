@@ -14,7 +14,8 @@ export const minikitConfig = {
     "signature": "rEx5brsJBOYG3ev4KzH/PyuAQSIn5KeoBdE4oM9S/p8lKjvNL5Y21Ti1jGIeovHMfPKNYaiW9Gkj4gULdvGM6Bs="
   },
   "baseBuilder": {
-    "allowedAddresses": ["0x39d89D346119f542056cdF6e8a261114875B6Ed2"]
+    "allowedAddresses": ["0x39d89D346119f542056cdF6e8a261114875B6Ed2"],
+    "ownerAddress": "0x39d89D346119f542056cdF6e8a261114875B6Ed2"
   },
   miniapp: {
     version: "1",
@@ -34,5 +35,6 @@ export const minikitConfig = {
     ogTitle: "Farcaster Fortune Cookie",
     ogDescription: "Your fortune awaits",
     ogImageUrl: `${ROOT_URL}/hero.png`,
+    "noindex": true
   }
 } as const;
