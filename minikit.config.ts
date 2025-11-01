@@ -32,7 +32,7 @@ export const minikitConfig = {
     tags: ["fortune", "farcaster", "entertainment"],
     heroImageUrl: `${ROOT_URL}/hero.png`,
     tagline: "Crack a cookie, cast your fate",
-    ogTitle: "Farcaster Fortune Cookie",
+    ogTitle: "Farcaster Fortune Cookie.",
     ogDescription: "Your fortune awaits",
     ogImageUrl: `${ROOT_URL}/hero.png`,
     "noindex": true
